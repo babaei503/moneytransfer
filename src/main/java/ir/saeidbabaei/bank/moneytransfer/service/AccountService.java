@@ -74,7 +74,7 @@ public class AccountService implements AccountServiceIntf {
             if (account != null) {
                 if (account.getBalance() >= amount)
                 {
-            	   entityManager.lock(account, LockModeType.OPTIMISTIC);
+            	   entityManager.lock(account, LockModeType.PESSIMISTIC_WRITE);
             	   account.setBalance(account.getBalance() - amount);
                 }
                 else
