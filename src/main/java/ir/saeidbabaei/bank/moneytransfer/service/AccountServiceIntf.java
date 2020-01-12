@@ -20,7 +20,7 @@ public interface AccountServiceIntf {
 		/** Creates an account with the specified account number
 		 * and name and create date and balance.
 		 * 
-		 * @param 		accno						Number of account.
+		 * @param 		accno						Account number.
 		 * @param		name						Name of account owner.
 		 * @param		createDate					Create date of account.
 		 * @param		balance						Initial balance of account.
@@ -32,14 +32,14 @@ public interface AccountServiceIntf {
  
 		/** Close an account with the specified account number
 		 * 
-		 * @param 		accno						Number of account.
+		 * @param 		accno						Account number.
 		 * @exception	InvalidAccountException		if account number does not exist.
 		*/
         public void closeAccount(long accno) throws InvalidAccountException;
  
 		/** Deposit an amount to an account with the specified account number
 		 * 
-		 * @param 		accno						Number of account.
+		 * @param 		accno						Account number.
 		 * @param		amount						Amount to be deposit
 		 * 
 		 * @return									Account
@@ -49,7 +49,7 @@ public interface AccountServiceIntf {
  
 		/** Withdraw an amount from an account with the specified account number
 		 * 
-		 * @param 		accno							Number of account.
+		 * @param 		accno							Account number.
 		 * @param		amount							Amount to be withdraw
 		 * 
 		 * @return										Account
@@ -58,9 +58,9 @@ public interface AccountServiceIntf {
 		*/
         public Account withdraw(long accno, double amount) throws InvalidAccountException,InsufficientBalanceException;
      
-		/** Find an amount with the specified account number
+		/** Find an account with the specified account number
 		 * 
-		 * @param 		accno						Number of account.
+		 * @param 		accno						Account number.
 		 * 
 		 * @return									Account
 		 * @exception	InvalidAccountException		if account number does not exist.
